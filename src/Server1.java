@@ -2,7 +2,7 @@ import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class Server extends Thread {
+public class Server1 extends Thread {
 
     String exampleReply = "HTTP/1.1 302 Found\n" +
             "Date: Wed, 03 Mar 2021 18:48:30 GMT\n" +
@@ -31,7 +31,7 @@ public class Server extends Thread {
                     PrintWriter out = new PrintWriter(new OutputStreamWriter(client.getOutputStream()));
                     while (true) {
                         String s = in.readLine();
-                        if (s == null) break;
+                        if (s.length() < 2) break;
                         else {
                             System.out.println(client + ". Messaggio: " + s);
                             StringBuffer reverse = new StringBuffer(s).reverse();
