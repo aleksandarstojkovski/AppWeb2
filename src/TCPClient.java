@@ -1,7 +1,7 @@
 import java.io.*;
 import java.net.Socket;
 
-public class Client extends Thread{
+public class TCPClient extends Thread{
 
     String exampleRequest = "GET /home.html HTTP/1.1\r\n"
             + "Host: www.supsi.ch\r\n"

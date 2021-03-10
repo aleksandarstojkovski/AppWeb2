@@ -1,14 +1,17 @@
 public class Main {
     public static void main(String[] args) {
 
-        Client client = new Client();
-        Server2 socketServer = new Server2();
+        TCPClient tcpClient = new TCPClient();
+        TCPServer1 tcpServer1 = new TCPServer1();
+        TCPServer2 tcpServer2 = new TCPServer2();
+        UDPClient udpClient = new UDPClient();
+        UDPServer udpServer = new UDPServer();
 
-        Thread clientThread = new Thread(client);
-        Thread serverThread = new Thread(socketServer);
+        Thread udpClientThread = new Thread(udpClient);
+        Thread udpServerThread = new Thread(udpServer);
 
-        //clientThread.start();
-        serverThread.start();
+        udpClientThread.start();
+        udpServerThread.start();
 
     }
 }

@@ -2,7 +2,7 @@ import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class Server2 extends Thread {
+public class TCPServer2 extends Thread {
 
     int requests = 1;
 

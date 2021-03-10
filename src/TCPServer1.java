@@ -2,7 +2,7 @@ import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class Server1 extends Thread {
+public class TCPServer1 extends Thread {
 
     String exampleReply = "HTTP/1.1 302 Found\n" +
             "Date: Wed, 03 Mar 2021 18:48:30 GMT\n" +
